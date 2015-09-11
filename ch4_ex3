@@ -1,0 +1,36 @@
+Enter file contents here// Example program
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    vector<double>distances;
+    double hi;
+    double lo;
+    double x = 0;
+    
+    for(double distance;cin>>distance;){
+        distances.push_back(distance);
+        
+        if (distances.size()>0)
+            hi = distance;
+            lo = distance;
+    }
+    for(int i=0;i<distances.size();++i){
+        cout<<"Distances["<<i<<"] = "<<distances[i]<<endl;
+        x=x+distances[i];
+        if (distances[i]>hi)hi = distances[i];
+        if (distances[i]<lo)lo = distances[i];
+    }
+    cout<<"The longest distance was :"<<hi<<endl;
+    cout<<"The shortest distance was :"<<lo<<endl;
+    cout<<"The average distance was :"<<x/distances.size()<<endl;
+    cout<<"The Total distance was : "<<x<<"(unit)"<<endl;
+    
+    
+    
+        
+        
+}
